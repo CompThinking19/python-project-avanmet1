@@ -1,0 +1,17 @@
+#This was just a rough draft of my program to see if the randomization of my lists was working.
+#The items in the lists are just song lyrics being used as placeholder text to be randomized and give some visual of how I want my final product to be formatted.
+
+import random
+line1_list = ["I dont think you understand", "I couldn't find quiet","If I stay here"]
+line2_list = ['Nowhere left to turn', 'I went out in the rain', 'Trouble will find me']
+line3_list = ['The walls keep breaking', 'I was just soaking my head', 'If I stay here']
+line4_list = ['Time is like a leaf in the wind', 'To unrattle my brain', "I'll never leave"]
+
+line1s_item = random.choice(line1_list)
+line2s_item = random.choice(line2_list)
+line3s_item = random.choice(line3_list)
+line4s_item = random.choice(line4_list)
+
+poem = (line1s_item + "\r\n" + line2s_item + "\r\n" + line3s_item + "\r\n" + line4s_item)
+
+print poem
