@@ -18,6 +18,6 @@ line3s_item = random.choice(line1_list)
 line4s_item = random.choice(line2_list)
 
 
-poem =  (line1s_item + "\r\n" + line2s_item + "\r\n" + line3s_item + "\r\n" + line4s_item)
+poem =  (line1s_item + line2s_item + line3s_item + line4s_item)
 
 print poem
