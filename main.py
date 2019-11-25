@@ -1,23 +1,110 @@
-source = open('leaves.txt')
+#Poem 1 Is laid out in quatrains as this was a form that the poetry of both Poe and Dickinson often took, even outside of their famous ballads.  The lines of this poem are aranged to alternate very other line between the words of Dickinson and then Poe.
+source1 = open('edcomplete.txt')
+source2 = open('poecomplete.txt')
 
-leaves = source.read()
-
-source2 = open('edcomplete.txt')
-
-edcomplete = source2.read()
+ed = source1.read()
+poe = source2.read()
 
 import re
 import random
 
-line1_list = re.findall(r'.+(?:\n)', leaves)
-line2_list = re.findall(r'.+(?:\n)', edcomplete)
+list1 = re.findall(r'.+(?:\n)', ed)
+list2 = re.findall(r'.+(?:\n)', poe)
 
-line1s_item = random.choice(line1_list)
-line2s_item = random.choice(line2_list)
-line3s_item = random.choice(line1_list)
-line4s_item = random.choice(line2_list)
+line1_item = random.choice(list1)
+list1.remove(line1_item)
+line2_item = random.choice(list2)
+list2.remove(line2_item)
+line3_item = random.choice(list1)
+list1.remove(line3_item)
+line4_item = random.choice(list2)
+list2.remove(line4_item)
+
+line5_item = random.choice(list1)
+list1.remove(line5_item)
+line6_item = random.choice(list2)
+list2.remove(line6_item)
+line7_item = random.choice(list1)
+list1.remove(line7_item)
+line8_item = random.choice(list2)
+list2.remove(line8_item)
+
+line9_item = random.choice(list1)
+list1.remove(line9_item)
+line10_item = random.choice(list2)
+list2.remove(line10_item)
+line11_item = random.choice(list1)
+list1.remove(line11_item)
+line12_item = random.choice(list2)
+list2.remove(line12_item)
+
+line13_item = random.choice(list1)
+list1.remove(line13_item)
+line14_item = random.choice(list2)
+list2.remove(line14_item)
+line15_item = random.choice(list1)
+list1.remove(line15_item)
+line16_item = random.choice(list2)
+list2.remove(line16_item)
 
 
-poem =  (line1s_item + line2s_item + line3s_item + line4s_item)
+stanza1 = (line1_item + line2_item + line3_item + line4_item)
+stanza2 = (line5_item + line6_item + line7_item + line8_item)
+stanza3 = (line9_item + line10_item + line11_item + line12_item)
+stanza4 = (line13_item + line14_item + line15_item + line16_item)
 
-print poem
+import os #trying to print line breaks between stanzas kept throwing errors
+#I could not figure out how to resolve them; looked up solutions on stack overflow and decided to use os.linesep to sidestep issue with regular python syntax
+
+poem1 = (stanza1 + os.linesep + stanza2 + os.linesep + stanza3 +os.linesep + stanza4)
+
+print "Poem 1" + os.linesep + poem1
+
+
+#Poem 2 is also laid out in quatrains but differs in that the first 2 lines of each stanza sample Poe and the last lines of each stanza sample Dikinson. The code is exactly the same, I have just changed which list a random item is being pulled from for each variable.
+
+line1s_item = random.choice(list2)
+list2.remove(line1s_item)
+line2s_item = random.choice(list2)
+list2.remove(line2s_item)
+line3s_item = random.choice(list1)
+list1.remove(line3s_item)
+line4s_item = random.choice(list1)
+list1.remove(line4s_item)
+
+line5s_item = random.choice(list2)
+list2.remove(line5s_item)
+line6s_item = random.choice(list2)
+list2.remove(line6s_item)
+line7s_item = random.choice(list1)
+list1.remove(line7s_item)
+line8s_item = random.choice(list1)
+list1.remove(line8s_item)
+
+line9s_item = random.choice(list2)
+list2.remove(line9s_item)
+line10s_item = random.choice(list2)
+list2.remove(line10s_item)
+line11s_item = random.choice(list1)
+list1.remove(line11s_item)
+line12s_item = random.choice(list1)
+list1.remove(line12s_item)
+
+line13s_item = random.choice(list2)
+list2.remove(line13s_item)
+line14s_item = random.choice(list2)
+list2.remove(line14s_item)
+line15s_item = random.choice(list1)
+list1.remove(line15s_item)
+line16s_item = random.choice(list1)
+list1.remove(line16s_item)
+
+
+stanza1s = (line1s_item + line2s_item + line3s_item + line4s_item)
+stanza2s = (line5s_item + line6s_item + line7s_item + line8s_item)
+stanza3s = (line9s_item + line10s_item + line11s_item + line12s_item)
+stanza4s = (line13s_item + line14s_item + line15s_item + line16s_item)
+
+poem2 = (stanza1s + os.linesep + stanza2s + os.linesep + stanza3s +os.linesep + stanza4s)
+
+print "Poem 2" + os.linesep + poem2
