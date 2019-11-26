@@ -1,19 +1,24 @@
 #Poem 1 Is laid out in quatrains as this was a form that the poetry of both Poe and Dickinson often took, even outside of their famous ballads.  The lines of this poem are aranged to alternate very other line between the words of Dickinson and then Poe.
 source1 = open('edcomplete.txt')
 source2 = open('poecomplete.txt')
+#used open function to open the txt files I will be using as the source of random lines for the project
 
 ed = source1.read()
 poe = source2.read()
 
 import re
 import random
+#imported regex for to search txt files for individual lines of poetry (everything except repeated line breaks)
+#imported random module for randomly selecting lines of poetry
 
 list1 = re.findall(r'.+(?:\n)', ed)
 list2 = re.findall(r'.+(?:\n)', poe)
+#these 2 lists are created using finall function and a regex expression that selects all consecutive text and puts it into a list, creating a new item every line break.  this ensures that each item in each list will be a single line of poetry
+#this regex expression ignores more than one line break, ensuring that spaces between poems and stanzas are not included as items in each list
 
-line1_item = random.choice(list1)
-list1.remove(line1_item)
-line2_item = random.choice(list2)
+line1_item = random.choice(list1) #the body of the poems being generated is accomplished through a series of variables created using the random choice function to put a random line of poetry from the desired list into each variable
+list1.remove(line1_item) #used remove to make sure that the value contained in the previous variable will not be repeated again, ensuring that the final result will not be overly repetative regardless of the list size
+line2_item = random.choice(list2) #the code repeats in this way, divided into 4 stanzas of poetry with each line being represented by a variable in the code
 list2.remove(line2_item)
 line3_item = random.choice(list1)
 list1.remove(line3_item)
