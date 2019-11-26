@@ -57,6 +57,7 @@ stanza1 = (line1_item + line2_item + line3_item + line4_item)
 stanza2 = (line5_item + line6_item + line7_item + line8_item)
 stanza3 = (line9_item + line10_item + line11_item + line12_item)
 stanza4 = (line13_item + line14_item + line15_item + line16_item)
+#the reason I created these staza variables is to make sure the code below did not become to bloated and hard to track down any errors in.  It was also much easier for me to create the line breaks between each staza this way.
 
 import os #trying to print line breaks between stanzas kept throwing errors
 #I could not figure out how to resolve them; looked up solutions on stack overflow and decided to use os.linesep to sidestep issue with regular python syntax
@@ -67,7 +68,8 @@ print "Poem 1" + os.linesep + poem1
 
 
 #Poem 2 is also laid out in quatrains but differs in that the first 2 lines of each stanza sample Poe and the last lines of each stanza sample Dikinson. The code is exactly the same, I have just changed which list a random item is being pulled from for each variable.
-
+#I included this second block of code as a result of my stopping to read a lot of Dickinson's poems as I was formatting the txt file. What I noticed was that even some of her darker poems sometimes end on a positive or more upbeat note which is not something that can be said of Poe.
+#I wanted to see if I could replicate this result by making the las 2 lines of each stanza pull from her work.  It was an interesing idea in theory but from my own observation, the results did not produce this effect enough to make a difference in how the lines of Poem 1 and Poem 2 interact with each other, probably due to the large smaple size of line available.
 line1s_item = random.choice(list2)
 list2.remove(line1s_item)
 line2s_item = random.choice(list2)
