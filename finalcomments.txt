@@ -1,0 +1,11 @@
+Comments
+Overall, really good, thoughtful comments throughout that answer the question "why" in addition to "what". You have a few spaces where there's a long section of code without comments, but generally you do well at orienting me where you are in your code.
+
+Code Quality
+This is where you could have thought a bit more about encapsulation and keeping your code a bit DRYer. Notably, you never use a function to do some of this work for you, which would have saved you a great deal of typing. However, you did well to look up some answers for your project on Stack Exchange, and I'm impressed by you doing some research to bring in the os package to do some work for you.
+
+Ambition
+Your README is excellent: you cover not just the basics of the project but the process whereby you arrived at your final submission. It also fleshes out your ambition beyond the results of the program itself: you do really well at talking about how the program explores and illuminates the overlaps between the two poets.
+
+Aesthetics
+The poems that your program spits out are actually fairly interesting and, as you say in your README, surprisingly cohesive. Running the program is a fairly simple affair, but it does accomplish the ambitions you describe in your README.
